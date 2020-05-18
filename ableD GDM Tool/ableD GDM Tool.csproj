@@ -95,6 +95,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Ast" />
+    <Folder Include="Common" />
+    <Folder Include="Su" />
+    <Folder Include="Vel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="nothing.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
