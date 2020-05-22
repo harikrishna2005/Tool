@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Common\Views\MediaTypeView.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +63,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Models\MediaType.cs" />
+    <Compile Include="Common\ViewModels\MediaTypeViewModel.cs" />
+    <Compile Include="Common\Views\MediaTypeView.xaml.cs">
+      <DependentUpon>MediaTypeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Framework\ObjectBase.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -97,7 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Ast" />
-    <Folder Include="Common" />
     <Folder Include="Su" />
     <Folder Include="Vel" />
   </ItemGroup>
