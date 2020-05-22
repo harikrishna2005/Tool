@@ -12,7 +12,7 @@ namespace ableD_GDM_Tool.Common.Models
 
     public class Tkt : MediaType
     {
-        public int Length { get; set; }
+        public string Length { get; set; }
         public string AirlineCode { get; set; }
         public string IssueDate { get; set; }
         public string PnrRl { get; set; }
@@ -26,10 +26,19 @@ namespace ableD_GDM_Tool.Common.Models
         
         public override string GetReadData()
         { 
+            string    data =  string.Concat(
+                                            AirlineCode, 
+                                            IssueDate, 
+                                            PnrRl, 
+                                            TktRl, 
+                                            ConfirmationNumber, 
+                                            Spare, 
+                                            Identification, 
+                                            IssueTime);
+
+            Length = data.PadLeft(3, 0);
             
-            
-            string.Concat(AirlineCode, IssueDate, PnrRl, TktRl, ConfirmationNumber, Spare, Identification, IssueTime);
-            return "super";
+            return  string.Concat(Length,data);
 
 
         }
